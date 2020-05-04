@@ -12,7 +12,8 @@ Renommez d'abord le fichier ```config.exemple.env```
 mv config.exemple.env config.env
 ```
 Ensuite veuillez entre votre clé secrète d'API Stripe:
-```STRIPE_SECRET_KEY=<YOUR SECRET STRIPE KEY>
+```env
+STRIPE_SECRET_KEY=<YOUR SECRET STRIPE KEY>
 ```
 Puis dans le fichier ```app.js``` ligne 1:
 ```js
