@@ -7,13 +7,20 @@ npm install
 ```
 
 Veillez a changer les clés d'API STRIPE:
-dans le fichier ```app.js``` ligne 1:
+Renommez d'abord le fichier ```config.exemple.env```
+```sh
+mv config.exemple.env config.env
+```
+Ensuite veuillez entre votre clé secrète d'API Stripe:
+```STRIPE_SECRET_KEY=<YOUR SECRET STRIPE KEY>
+```
+Puis dans le fichier ```app.js``` ligne 1:
 ```js
 const stripe = Stripe('VOTRE CLE PUBLIQUE STRIPE');
 ```
-et dans le fichier ```server.js``` ligne 4
+Votre clé secrète sera appelée dans le fichier ```server.js``` ligne 6
 ```js
-const stripe = require('stripe')('VOTRE CLE SECRETE STRIPE');
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 ```
 
 Pour lancer le server NodeJS:
