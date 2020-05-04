@@ -1,4 +1,4 @@
-const stripe = Stripe('VOTRE CLE PUBLIQUE STRIPE');
+const stripe = Stripe('pk_test_lj9iCXomiy6vFYN7fJmM4krL00bLFmX17k');
 const elements = stripe.elements();
 
 var style = {
